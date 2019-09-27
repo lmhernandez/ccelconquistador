@@ -44,6 +44,9 @@ a:hover {
   display: -ms-flexbox;
   display: flex; }
 
+.main-web {
+  margin-top: 70px; }
+
 .header-section__titulo {
   padding-bottom: 16px; }
   .header-section__titulo p {
@@ -133,6 +136,21 @@ a:hover {
   .bienvenido__box img {
     width: 100%; }
 
+.pastores {
+  padding-bottom: 24px; }
+  .pastores__socialMedia {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 12px; }
+    .pastores__socialMedia span {
+      position: relative;
+      cursor: pointer; }
+    .pastores__socialMedia img {
+      width: 50px;
+      margin-right: 12px; }
+
 .invitacion {
   background: #f7f9fb; }
   .invitacion__box {
@@ -140,23 +158,49 @@ a:hover {
     .invitacion__box img {
       width: 100%; }
 
-.reuniones__box .reuniones-item__img {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .reuniones__box .reuniones-item__img img {
-    width: auto;
-    height: 300px; }
+.reuniones__box .reuniones-border {
+  padding: 12px;
+  width: 100%; }
 
-.reuniones__box .reuniones-item__titulo {
-  font-size: 24px;
-  color: #404040;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-align: center; }
+.reuniones__box .reuniones-item {
+  border: 1.5px solid gray;
+  transition: ease-in .5s; }
+  .reuniones__box .reuniones-item:hover {
+    border: 1.5px solid #42A5F5;
+    transition: ease-in .5s; }
+  .reuniones__box .reuniones-item__img {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .reuniones__box .reuniones-item__img img {
+      width: auto;
+      height: 300px; }
+  .reuniones__box .reuniones-item__titulo {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    transition: ease-in .5s; }
+  .reuniones__box .reuniones-item__descripcion {
+    text-align: center; }
+  .reuniones__box .reuniones-item__datos {
+    transition: ease-in .5s;
+    background: #45545c;
+    color: #ffffff; }
+
+.reuniones__box .reuniones-item:hover .reuniones-item__datos {
+  background-color: #42A5F5;
+  color: white;
+  text-align: center;
+  transition: ease-in .5s; }
+
+.reuniones__box .reuniones-item:hover .reuniones-item__titulo {
+  color: white;
+  transition: ease-in .5s; }
 
 .escuelas {
   height: 800px; }
@@ -268,9 +312,9 @@ a:hover {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-    .reuniones__box .reuniones-item {
-      width: 50%;
-      padding: 12px; }
+    .reuniones__box .reuniones-border {
+      padding: 12px;
+      width: 50%; }
   .escuelas {
     height: 400px; }
     .escuelas__box {
@@ -310,12 +354,12 @@ a:hover {
     width: 50%; }
   .invitacion__box {
     width: 50%; }
-  .reuniones__box .reuniones-item {
-    width: 25%;
-    padding: 12px; }
-    .reuniones__box .reuniones-item__img img {
-      width: 100%;
-      height: auto; }
+  .reuniones__box .reuniones-border {
+    padding: 12px;
+    width: 25%; }
+  .reuniones__box .reuniones-item__img img {
+    width: 100%;
+    height: auto; }
   .voluntarios__box a {
     width: 25%;
     padding: 12px;
@@ -341,9 +385,10 @@ a:hover {
 
 nav {
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   width: 100%;
-  background: transparent; }
+  background: transparent;
+  top: 0; }
   nav .nav-logo {
     width: auto;
     width: 100%;
@@ -412,7 +457,7 @@ nav {
       nav .list-links .item-links:hover a::after {
         width: 100%; }
     nav .list-links .item-links.active a {
-      color: #ffffff; }
+      color: gray; }
       nav .list-links .item-links.active a:before {
         width: 100%; }
       nav .list-links .item-links.active a:after {
@@ -454,7 +499,6 @@ nav {
     display: block; }
   nav {
     position: fixed;
-    z-index: 99;
     width: 100%; }
     nav .nav-logo {
       width: auto; }
@@ -566,6 +610,24 @@ nav {
   width: 100%;
   height: 4px; }
 
+.nav-fix .list-links__item a:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  background: gray;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.8; }
+
+.nav-fix .list-links .item-links.active a {
+  color: gray; }
+
+.nav-fix .list-links .item-links:hover a {
+  color: gray; }
+
 .navTrigger i:nth-child(1) {
   animation: outT 0.8s backwards;
   animation-direction: reverse; }
@@ -651,3 +713,95 @@ nav {
 @media all and (max-width: 700px) {
   .myP {
     padding: 2%; } }
+
+.ofrenda .image {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.formas {
+  padding: 24px 0; }
+  .formas button {
+    width: 100%;
+    margin-top: 24px;
+    height: 50px;
+    background: white;
+    border: 1.5px solid #42A5F5;
+    border-radius: 40px;
+    color: #42A5F5;
+    box-shadow: -3px 4px 12px -1px #ccc;
+    font-size: 20px;
+    transition: all .5s; }
+    .formas button:hover {
+      transition: all .5s;
+      background: #42A5F5;
+      border: none;
+      border-radius: 40px;
+      color: white; }
+
+.formas-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center; }
+  .formas-item__descripcion {
+    padding-left: 14px; }
+    .formas-item__descripcion .titulo {
+      color: #000;
+      font-size: 24px; }
+  .formas-item__icono {
+    background: #42A5F5;
+    padding: 14px;
+    border-radius: 50%;
+    position: relative; }
+    .formas-item__icono:after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      padding: 5px;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-sizing: content-box;
+      box-shadow: 0 0 0 3px #42A5F5;
+      transition: transform .3s,opacity .3s;
+      -ms-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0; }
+  .formas-item:hover .formas-item__icono:after {
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; }
+
+.banner-interno {
+  height: 290px;
+  width: 100%;
+  background-image: url(../img/web/banner-interno.jpg);
+  background-size: cover;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white; }
+
+.nuestra-iglesia .nuestra-historia--descripcion {
+  text-align: justify; }
+
+.nuestra-iglesia .documental p {
+  color: #ffffff; }
+
+.nuestra-iglesia .documental .header-section {
+  position: relative;
+  z-index: 9; }
+
+.nuestra-iglesia .parallax {
+  height: 500px; }
+  .nuestra-iglesia .parallax .video {
+    position: relative;
+    z-index: 9; }
