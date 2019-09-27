@@ -23,6 +23,20 @@
     }
 }
 .pastores{
+    padding-bottom: 24px;
+    &__socialMedia{
+        display: flex;
+        justify-content: center;
+        padding-top: 12px;
+        span{
+            position: relative;
+            cursor: pointer;
+        }
+        img{
+            width: 50px;
+            margin-right: 12px;
+        }
+    }
 }
 .invitacion{
     background: #f7f9fb;
@@ -36,11 +50,22 @@
 
 .reuniones{
     &__box{
+        .reuniones-border{
+            padding: 12px;
+            width: 100%;
+        }
         .reuniones-item{
+            border: 1.5px solid $gray;
+            transition: ease-in .5s;
+            &:hover{
+                border: 1.5px solid #42A5F5;    
+                transition: ease-in .5s            
+            }
+            
             &__img{            
-            display: flex;
-            justify-content: center;
-            align-items: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 img{
                     width: auto;
                     height: 300px;
@@ -48,11 +73,31 @@
             }
             &__titulo{            
                 font-size: 24px;
-                color: #404040;
+                color: $white;
                 font-weight: 600;
                 text-transform: uppercase;       
                 text-align: center;     
+                transition: ease-in .5s
             }
+            &__descripcion{
+                text-align: center;
+            }
+            &__datos{
+                transition: ease-in .5s;
+                background: #45545c;
+                color: $white
+            }
+        }
+
+        .reuniones-item:hover .reuniones-item__datos{                
+            background-color: #42A5F5;
+            color: white;          
+            text-align: center;  
+            transition: ease-in .5s
+        }
+        .reuniones-item:hover .reuniones-item__titulo{                
+            color: white;     
+            transition: ease-in .5s       
         }
     }
 }
@@ -198,9 +243,12 @@
         &__box{
             display: flex;
             flex-wrap: wrap;
-            .reuniones-item{
-                width: 50%;
+            .reuniones-border{
                 padding: 12px;
+                width: 50%;
+            }
+            .reuniones-item{               
+                
                 &__img{
                     img{
                     }
@@ -363,9 +411,11 @@
     
     .reuniones{
         &__box{
-            .reuniones-item{
-                width: 25%;
+            .reuniones-border{
                 padding: 12px;
+                width: 25%;
+            }
+            .reuniones-item{
                 &__img{
                     img{
                         width: 100%;
