@@ -1,0 +1,141 @@
+.reuniones_p1{
+    .reuniones-s1{
+        &__item{
+            margin-bottom: 48px;
+            img{
+                width: 100%;
+            }
+        }
+        .box-buscar{
+            input{
+                display: block;
+                width: 100%;
+                min-height: 50px;
+                padding: 13px 19px;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                color: #9b9b9b;
+                background-color: #f5f5f5;
+                background-image: none;
+                border-radius: 0;
+                -webkit-appearance: none;
+                transition: .3s ease-in-out;
+                border: none;
+            }
+        }
+        .box-galeria{
+            margin-top: 24px;
+            h4{
+                
+            }
+        }
+        .box-archivo{
+            margin-top: 24px;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            li{
+                display: inline-block;
+                width: 50%;
+                i{
+                    display: inline-block;
+                    padding-right: 8px;
+                    color: $c_icon_gris
+                }
+                a{
+                    color: $c_resaltante_1;
+                }
+            }
+        }
+        .box-noticias{
+            &__item{
+                h4{
+                    color: $c_resaltante_1;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+                i{
+                    display: inline-block;
+                    padding-right: 8px;
+                    color: $c_icon_gris
+                }
+            }
+        }
+    }
+    .box-descripcion{
+        margin-top: 24px;
+        .titulo{
+            font-weight: 700;
+            line-height: 1.35;
+            letter-spacing: 0;
+            font-size: 24px;
+            color: $c_titulo;
+        }
+        .fecha{
+            font-weight: 400;
+            line-height: 1.71429;
+            letter-spacing: 0.02em;
+            color: $c_parrafo;
+        }
+        .parrafo{
+            font-weight: 400;
+            line-height: 1.71429;
+            letter-spacing: 0.02em;
+            color: #9b9b9b;
+            font-size: 14px;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            height: 50px;
+            li{
+                a{
+                    padding: 4px 16px;
+                    border: 1px solid $c_parrafo;
+                    margin: 0 12px;
+                    border-radius: 8px;
+                    color: $c_parrafo;
+                    transition: all .5s;
+                    &:hover{
+                        transition: all .5s;
+                        background: $c_resaltante_1;
+                        color: $white;
+                        border: 1px solid $c_resaltante_1;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.reuniones_p2{
+    .section-custom{
+        &:nth-child(odd){
+            background: $c_fondo_humo;
+        }
+        
+    }
+    .sedes{
+        h3{
+            color: $c_titulo;
+        }
+    }
+    .horario{
+        display: flex;
+        border-bottom: 4px solid #E4E4E4;
+        margin-bottom: 12px;
+        margin-top: 12px;
+        .dia{
+            display: inline-block;
+            width: 40%;
+        }
+        .hora{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

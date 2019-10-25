@@ -1,0 +1,156 @@
+.voluntarios{
+    .significado{
+        padding: 48px 0;
+    }
+    .funciones{
+        padding: 48px 0;
+        .detalle{
+            border-top: 2px solid $c_parrafo;
+            padding-top: 24px;
+        }
+        &--item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                max-width: 100%;
+                height: 44px;
+            }
+        }
+        .header-section{
+            padding-bottom: 24px;
+        }
+    }
+
+    .informacion{
+        &--img{
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            img{
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        &--detalle{
+            .item{
+                display: flex;
+                align-items: flex-start;
+                .box-img{
+                    img{
+                        width: 50px;
+                    }
+                }
+            }
+            .box-descripcion{
+                p{
+                    &:nth-child(1){
+                        color: $c_resaltante_1;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    
+
+}
+.voluntarios_p2{
+    .oportunidades{
+        padding: 48px 0;
+        &--titulo{
+            font-size: 18px;
+            color: $c_titulo;
+            padding: 24px 0 0;
+        }
+        &--item{
+            display: flex;
+            flex-direction: column;
+            border-bottom: 2px solid $c_parrafo;
+            padding-top: 24px;
+            .titulo{
+                color: $c_titulo;
+                font-size: 22px;
+            }
+            .subtitulo{
+                color: $c_subtitulo;
+                font-size: 16px;
+            }
+            .descripcion{
+                color: $c_parrafo;
+                font-size: 14px;
+                padding-bottom: 24px;
+            }
+        }
+    }
+    .suscripcion{
+        background: #5A748C;
+        padding: 12px;
+        
+        &--item{
+            display: flex;
+            border: 2px dashed #fff;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        img{
+            max-height: 200px;
+            margin: 48px 0;
+        }
+        .descripcion{
+            padding: 12px;
+            color: white;
+            text-align: center;
+            p{
+                font-size: 14px;
+            }
+            p:nth-child(1){
+                font-size: 18px;
+                font-style: italic;
+            }
+        }
+        
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background: #445E72;
+        padding: 12px;
+        &--input{
+            width: 100%;   
+            display: flex;
+            justify-content: center;   
+            margin-bottom: 12px;     
+        }
+        input{
+            width: 70%;
+            display: inline-block;       
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+              
+        }
+    }
+
+}
+
+@media (min-width: 1024px) { 
+    .voluntarios{
+        .funciones{
+            .header-section{
+                width: 75%;
+            }
+        }
+        .significado{
+            .header-section {
+                width: 90%;
+            }
+        }
+    }
+}

@@ -13,7 +13,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
-  color: #666;
+  color: #9b9b9b;
   box-sizing: border-box;
   position: relative;
   font-family: 'Kanit', sans-serif;
@@ -44,9 +44,6 @@ a:hover {
   display: -ms-flexbox;
   display: flex; }
 
-.main-web {
-  margin-top: 70px; }
-
 .header-section__titulo {
   padding-bottom: 16px; }
   .header-section__titulo p {
@@ -67,9 +64,33 @@ a:hover {
   padding-top: 32px;
   padding-bottom: 22px; }
 
+.btn-personalizado {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100px; }
+  .btn-personalizado button {
+    width: 300px;
+    margin-top: 24px;
+    min-height: 50px;
+    background: #42A5F5;
+    border: 1.5px solid #42A5F5;
+    border-radius: 40px;
+    color: #ffffff;
+    box-shadow: none;
+    font-size: 20px;
+    margin: auto;
+    transition: all .5s; }
+    .btn-personalizado button:hover {
+      transition: all .5s;
+      box-shadow: -3px 4px 12px -1px #ccc; }
+
 .parallax {
   width: 100%;
-  height: 400px;
+  height: 800px;
   -ms-flex: 1;
   flex: 1;
   display: -ms-flexbox;
@@ -79,6 +100,14 @@ a:hover {
   overflow: hidden;
   background-color: #000;
   padding: 0 !important; }
+  .parallax .header-section {
+    position: relative;
+    z-index: 9; }
+    .parallax .header-section__titulo p {
+      color: #ffffff; }
+    .parallax .header-section__subtitulo p {
+      z-index: 9;
+      color: #ffffff; }
   .parallax .image {
     background-attachment: fixed;
     background-size: cover;
@@ -98,121 +127,7 @@ a:hover {
       width: 100%;
       height: 100%;
       position: absolute; }
-
-@media (min-width: 768px) {
-  .header-section__titulo p {
-    width: 50%;
-    margin: auto; } }
-
-@media (min-width: 1200px) {
-  .header-section {
-    width: 50%;
-    margin: auto; }
-    .header-section__titulo p {
-      font-size: 32px; }
-    .header-section__subtitulo p {
-      text-align: center; }
-  .section-custom {
-    padding: 0 10%;
-    padding-top: 52px;
-    padding-bottom: 22px; } }
-
-/******************  HOME ***********************/
-.banner {
-  height: 60vh;
-  overflow: hidden; }
-  .banner div {
-    background: red;
-    height: 100% !important; }
-  .banner .img-banner {
-    height: 100%;
-    width: auto; }
-
-.bienvenido__box {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center; }
-  .bienvenido__box img {
-    width: 100%; }
-
-.pastores {
-  padding-bottom: 24px; }
-  .pastores__socialMedia {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding-top: 12px; }
-    .pastores__socialMedia span {
-      position: relative;
-      cursor: pointer; }
-    .pastores__socialMedia img {
-      width: 50px;
-      margin-right: 12px; }
-
-.invitacion {
-  background: #f7f9fb; }
-  .invitacion__box {
-    margin: auto; }
-    .invitacion__box img {
-      width: 100%; }
-
-.reuniones__box .reuniones-border {
-  padding: 12px;
-  width: 100%; }
-
-.reuniones__box .reuniones-item {
-  border: 1.5px solid gray;
-  transition: ease-in .5s; }
-  .reuniones__box .reuniones-item:hover {
-    border: 1.5px solid #42A5F5;
-    transition: ease-in .5s; }
-  .reuniones__box .reuniones-item__img {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .reuniones__box .reuniones-item__img img {
-      width: auto;
-      height: 300px; }
-  .reuniones__box .reuniones-item__titulo {
-    font-size: 24px;
-    color: #ffffff;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-    transition: ease-in .5s; }
-  .reuniones__box .reuniones-item__descripcion {
-    text-align: center; }
-  .reuniones__box .reuniones-item__datos {
-    transition: ease-in .5s;
-    background: #45545c;
-    color: #ffffff; }
-
-.reuniones__box .reuniones-item:hover .reuniones-item__datos {
-  background-color: #42A5F5;
-  color: white;
-  text-align: center;
-  transition: ease-in .5s; }
-
-.reuniones__box .reuniones-item:hover .reuniones-item__titulo {
-  color: white;
-  transition: ease-in .5s; }
-
-.escuelas {
-  height: 800px; }
-  .escuelas .header-section {
-    position: relative;
-    z-index: 9; }
-    .escuelas .header-section__titulo p {
-      color: #ffffff; }
-    .escuelas .header-section__subtitulo p {
-      z-index: 9;
-      color: #ffffff; }
-  .escuelas__box {
+  .parallax__box {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -221,163 +136,84 @@ a:hover {
     flex-direction: column;
     position: relative;
     z-index: 9; }
-    .escuelas__box .escuelas-item {
+    .parallax__box .parallax-item {
       height: 150px; }
 
-.voluntarios__box .voluntarios-item {
-  position: relative;
+@media (min-width: 768px) {
+  .header-section__titulo p {
+    width: 80%;
+    margin: auto; }
+  .parallax {
+    height: 400px; }
+    .parallax__box {
+      padding-top: 24px;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      .parallax__box .parallax-item {
+        width: 25%; } }
+
+@media (min-width: 1200px) {
+  .header-section {
+    width: 75%;
+    margin: auto; }
+    .header-section__titulo p {
+      width: 100%;
+      font-size: 32px; }
+    .header-section__subtitulo p {
+      text-align: center; }
+  .section-custom {
+    padding: 0 10%;
+    padding-top: 52px;
+    padding-bottom: 52px; } }
+
+.owl-nav {
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .owl-nav button:hover {
+    background: transparent !important; }
+  .owl-nav button:focus {
+    background: transparent;
+    border: none;
+    outline: none; }
+  .owl-nav span {
+    color: white;
+    font-size: 36px;
+    padding: 24px; }
+    .owl-nav span:focus {
+      border: none;
+      outline: none; }
+
+.owl-dots {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  bottom: 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .voluntarios__box .voluntarios-item__img {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .voluntarios__box .voluntarios-item__img:before {
-      content: "";
-      background: #453e3e;
-      position: absolute;
-      z-index: 9;
-      width: 100%;
-      height: 100%;
-      opacity: 0.5; }
-    .voluntarios__box .voluntarios-item__img img {
-      width: auto;
-      height: 300px; }
-  .voluntarios__box .voluntarios-item__titulo {
-    font-size: 24px;
-    color: #ffffff;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-    position: absolute;
-    z-index: 9; }
-  .voluntarios__box .voluntarios-item .linea-cuadro {
-    width: 90%;
-    position: absolute;
-    height: 90%;
-    border: 1px solid white;
-    z-index: 9;
-    opacity: 0; }
-
-.voluntarios__box a:hover .linea-cuadro {
-  opacity: 1 !important;
-  transition: all 1s; }
-
-.voluntarios__box a:hover .voluntarios-item__img:before {
-  background: #061620; }
-
-.footer {
-  background: #000000; }
-  .footer__superior {
-    padding: 10% 24px; }
-    .footer__superior .footer-item {
-      padding-bottom: 24px; }
-    .footer__superior .item-contacto {
-      padding-bottom: 0; }
-  .footer__inferior {
-    border-top: 1px solid gray;
-    padding: 12px 24px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
-  .footer P {
-    color: #ffffff; }
-  .footer a {
-    color: gray; }
-
-@media (min-width: 768px) {
-  .bienvenido__box img {
-    height: 400px;
-    width: auto; }
-  .invitacion {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center; }
-    .invitacion__header {
-      width: 70%;
-      padding-right: 24px; }
-    .invitacion__box {
-      width: 30%; }
-  .reuniones__box {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    .reuniones__box .reuniones-border {
-      padding: 12px;
-      width: 50%; }
-  .escuelas {
-    height: 400px; }
-    .escuelas__box {
-      padding-top: 24px;
-      -ms-flex-direction: row;
-      flex-direction: row; }
-      .escuelas__box .escuelas-item {
-        width: 25%; }
-  .voluntarios__box {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    .voluntarios__box a {
-      width: 50%;
-      display: inline-block; }
-  .footer__superior {
-    display: -ms-flexbox;
-    display: flex; }
-    .footer__superior .footer-item {
-      width: 25%;
-      padding-left: 12px; } }
-
-@media (min-width: 992px) {
-  .banner {
-    height: 90vh;
-    overflow: hidden; }
-  .invitacion__box img {
-    width: auto;
-    height: 480px; } }
-
-@media (min-width: 1200px) {
-  .banner {
-    height: 100vh;
-    overflow: hidden; }
-  .invitacion__header {
-    width: 50%; }
-  .invitacion__box {
-    width: 50%; }
-  .reuniones__box .reuniones-border {
-    padding: 12px;
-    width: 25%; }
-  .reuniones__box .reuniones-item__img img {
-    width: 100%;
-    height: auto; }
-  .voluntarios__box a {
-    width: 25%;
-    padding: 12px;
-    display: inline-block; }
-  .voluntarios__box .voluntarios-item__img img {
-    width: 100%;
-    height: auto; }
-  .footer {
-    padding: 0 10%; }
-    .footer__superior {
-      padding: 5% 24px;
-      display: -ms-flexbox;
-      display: flex; }
-      .footer__superior .footer-item {
-        width: 25%;
-        padding-left: 12px; }
-    .footer__inferior {
-      border-top: 1px solid #3c3c3c; } }
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding-bottom: 24px; }
+  .owl-dots button {
+    border: none;
+    outline: none;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: white !important;
+    border-radius: 50%;
+    margin: 4px !important; }
+    .owl-dots button span {
+      background: transparent !important; }
+  .owl-dots button.active {
+    background: #42A5F5 !important; }
 
 .show_list {
   height: auto;
@@ -387,8 +223,10 @@ nav {
   position: fixed;
   z-index: 999;
   width: 100%;
-  background: transparent;
+  background: white;
   top: 0; }
+  nav .container {
+    background: white; }
   nav .nav-logo {
     width: auto;
     width: 100%;
@@ -425,7 +263,7 @@ nav {
       -ms-flex-align: center;
       align-items: center; }
       nav .list-links__item a {
-        color: #ffffff;
+        color: #9b9b9b;
         font-weight: 400;
         position: relative; }
         nav .list-links__item a:hover:before {
@@ -457,7 +295,7 @@ nav {
       nav .list-links .item-links:hover a::after {
         width: 100%; }
     nav .list-links .item-links.active a {
-      color: gray; }
+      color: #9b9b9b; }
       nav .list-links .item-links.active a:before {
         width: 100%; }
       nav .list-links .item-links.active a:after {
@@ -497,9 +335,14 @@ nav {
 @media screen and (min-width: 992px) {
   .navTrigger {
     display: block; }
+    .navTrigger i {
+      background-color: white; }
   nav {
     position: fixed;
-    width: 100%; }
+    width: 100%;
+    background: transparent; }
+    nav .container {
+      background: transparent; }
     nav .nav-logo {
       width: auto; }
       nav .nav-logo img {
@@ -603,7 +446,7 @@ nav {
   bottom: 0; }
 
 .navTrigger i {
-  background-color: white;
+  background-color: #000;
   border-radius: 2px;
   content: '';
   display: block;
@@ -618,7 +461,7 @@ nav {
   position: absolute;
   bottom: -2px;
   right: 0;
-  background: gray;
+  background: #9b9b9b;
   transition: all 0.5s ease-in-out;
   opacity: 0.8; }
 
@@ -626,7 +469,7 @@ nav {
   color: gray; }
 
 .nav-fix .list-links .item-links:hover a {
-  color: gray; }
+  color: #9b9b9b; }
 
 .navTrigger i:nth-child(1) {
   animation: outT 0.8s backwards;
@@ -696,9 +539,10 @@ nav {
 
 .nav-fix {
   background: #fff;
-  height: 70px; }
+  height: 70px;
+  box-shadow: 0px 3px 0px 0px rgba(224, 224, 224, 0.6); }
   .nav-fix .item-links a {
-    color: gray; }
+    color: #9b9b9b; }
 
 .myH2 {
   text-align: center;
@@ -713,6 +557,964 @@ nav {
 @media all and (max-width: 700px) {
   .myP {
     padding: 2%; } }
+
+/******************  HOME ***********************/
+.parallax.escuelas .image {
+  background: url(../../../produccion/img/home/panoramica.png);
+  background-size: cover; }
+
+.banner {
+  height: 100vh;
+  overflow: hidden; }
+  .banner .item:after {
+    content: "";
+    background: #0c0c0c5c;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 0; }
+  .banner div {
+    height: 100% !important; }
+  .banner .img-banner {
+    height: 100%;
+    width: auto; }
+
+.bienvenido__box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .bienvenido__box img {
+    width: 100%; }
+
+.pastores {
+  padding: 0 16px;
+  padding-bottom: 24px; }
+  .pastores__socialMedia {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 12px; }
+    .pastores__socialMedia span {
+      position: relative;
+      cursor: pointer; }
+    .pastores__socialMedia img {
+      width: 50px;
+      margin-right: 12px; }
+
+.invitacion {
+  background: #F7F7F7; }
+  .invitacion__box {
+    margin: auto; }
+    .invitacion__box img {
+      width: 100%; }
+
+.reuniones__box .reuniones-border {
+  padding: 12px;
+  width: 100%; }
+
+.reuniones__box .reuniones-item {
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2);
+  transition: ease-in .5s; }
+  .reuniones__box .reuniones-item:hover {
+    box-shadow: 0px 1px 7px #42a5f5bd;
+    transition: ease-in .5s; }
+  .reuniones__box .reuniones-item__img {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .reuniones__box .reuniones-item__img img {
+      max-width: 100%;
+      width: auto;
+      height: 300px; }
+  .reuniones__box .reuniones-item__titulo {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    transition: ease-in .5s; }
+  .reuniones__box .reuniones-item__descripcion {
+    text-align: center;
+    padding-bottom: 12px; }
+  .reuniones__box .reuniones-item__datos {
+    transition: ease-in .5s;
+    background: #45545c;
+    color: #ffffff; }
+
+.reuniones__box .reuniones-item:hover .reuniones-item__datos {
+  background-color: #42A5F5;
+  color: white;
+  text-align: center;
+  transition: ease-in .5s; }
+
+.reuniones__box .reuniones-item:hover .reuniones-item__titulo {
+  color: white;
+  transition: ease-in .5s; }
+
+.voluntarios__box .voluntarios-item {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 24px; }
+  .voluntarios__box .voluntarios-item__img {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .voluntarios__box .voluntarios-item__img:before {
+      content: "";
+      background: #453e3e;
+      position: absolute;
+      z-index: 9;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5; }
+    .voluntarios__box .voluntarios-item__img img {
+      width: auto;
+      max-width: 100%;
+      height: 300px; }
+  .voluntarios__box .voluntarios-item__titulo {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    z-index: 9; }
+  .voluntarios__box .voluntarios-item .linea-cuadro {
+    width: 90%;
+    position: absolute;
+    height: 90%;
+    border: 1px solid white;
+    z-index: 9;
+    opacity: 0; }
+
+.voluntarios__box a:hover .linea-cuadro {
+  opacity: 1 !important;
+  transition: all 1s; }
+
+.voluntarios__box a:hover .voluntarios-item__img:before {
+  background: #061620; }
+
+.contacto .btn-contacto {
+  background: #42A5F5;
+  color: white;
+  height: 50px;
+  border-radius: 25px;
+  display: inline-block;
+  width: 230px;
+  font-size: 18px;
+  line-height: 50px;
+  padding: 0; }
+
+.contacto input {
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px; }
+
+.footer {
+  background: #000000; }
+  .footer__superior {
+    padding: 10% 24px; }
+    .footer__superior .footer-item {
+      padding-bottom: 24px; }
+    .footer__superior .item-contacto {
+      padding-bottom: 0; }
+  .footer__inferior {
+    border-top: 1px solid gray;
+    padding: 12px 24px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .footer__inferior .redes {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center; }
+      .footer__inferior .redes img {
+        max-width: 30px;
+        margin-left: 12px;
+        cursor: pointer; }
+  .footer P {
+    color: #ffffff; }
+  .footer a {
+    color: gray; }
+
+@media (min-width: 768px) {
+  .bienvenido__box img {
+    height: 400px;
+    width: auto; }
+  .invitacion {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center; }
+    .invitacion__header {
+      width: 70%;
+      padding-right: 24px; }
+    .invitacion__box {
+      width: 30%; }
+  .reuniones__box {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .reuniones__box .reuniones-border {
+      padding: 12px;
+      width: 50%; }
+  .voluntarios__box {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .voluntarios__box a {
+      width: 50%;
+      display: inline-block; }
+  .footer__superior {
+    display: -ms-flexbox;
+    display: flex; }
+    .footer__superior .footer-item {
+      width: 25%;
+      padding-left: 12px; } }
+
+@media (min-width: 992px) {
+  .banner {
+    height: 90vh;
+    overflow: hidden; }
+  .invitacion__box img {
+    width: auto;
+    height: 480px; } }
+
+@media (min-width: 1200px) {
+  .banner {
+    height: 100vh;
+    overflow: hidden; }
+  .invitacion__header {
+    width: 50%; }
+  .invitacion__box {
+    width: 50%; }
+  .reuniones__box .reuniones-border {
+    padding: 12px;
+    width: 25%; }
+  .reuniones__box .reuniones-item__img img {
+    width: 100%;
+    height: auto; }
+  .voluntarios__box a {
+    width: 25%;
+    padding: 12px;
+    display: inline-block; }
+  .voluntarios__box .voluntarios-item__img img {
+    width: 100%;
+    height: auto; }
+  .footer {
+    padding: 0 10%; }
+    .footer__superior {
+      padding: 5% 24px;
+      display: -ms-flexbox;
+      display: flex; }
+      .footer__superior .footer-item {
+        width: 25%;
+        padding-left: 12px; }
+    .footer__inferior {
+      border-top: 1px solid #3c3c3c; } }
+
+.banner-interno {
+  height: 290px;
+  width: 100%;
+  background-image: url(../img/web/banner-interno.jpg);
+  background-size: cover;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white; }
+
+.nuestra-iglesia .nuestra-historia--descripcion {
+  text-align: justify; }
+
+.nuestra-iglesia .documental p {
+  color: #ffffff; }
+
+.nuestra-iglesia .documental .header-section {
+  position: relative;
+  z-index: 9; }
+
+.nuestra-iglesia .parallax.documental {
+  height: 500px; }
+  .nuestra-iglesia .parallax.documental .video {
+    position: relative;
+    z-index: 9; }
+
+.nuestra-iglesia .valores {
+  background: #f2f3f8; }
+  .nuestra-iglesia .valores__box {
+    padding: 0; }
+  .nuestra-iglesia .valores--item {
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 24px;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border-radius: 9px;
+    height: 100px;
+    -ms-flex-align: center;
+    align-items: center; }
+    .nuestra-iglesia .valores--item p {
+      width: 50%;
+      display: inline-block; }
+      .nuestra-iglesia .valores--item p:nth-child(1) {
+        color: #777777;
+        padding-left: 2rem;
+        font-weight: 700; }
+
+.nuestra-iglesia .vision {
+  margin-bottom: 48px; }
+  .nuestra-iglesia .vision .panel {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%; }
+  .nuestra-iglesia .vision .panel-img {
+    height: 350px;
+    background: url(./../../../produccion/img/nuestraIglesia/vision.jpg);
+    background-position: center; }
+  .nuestra-iglesia .vision h3 {
+    text-align: center;
+    color: #2c3038; }
+  .nuestra-iglesia .vision button {
+    width: 70%;
+    margin-top: 24px;
+    min-height: 50px;
+    background: white;
+    border: 1.5px solid #42A5F5;
+    border-radius: 40px;
+    color: #42A5F5;
+    box-shadow: -3px 4px 12px -1px #ccc;
+    font-size: 20px;
+    transition: all .5s; }
+    .nuestra-iglesia .vision button:hover {
+      transition: all .5s;
+      background: #42A5F5;
+      border: none;
+      border-radius: 40px;
+      color: white; }
+
+.creemos h3 {
+  color: #2c3038;
+  text-align: center;
+  margin-top: 36px; }
+
+.creemos .subtitulo {
+  font-size: 16px;
+  color: #2c3038; }
+
+.creemos .parrafo {
+  color: #9b9b9b;
+  font-size: 14px; }
+
+@media (min-width: 1024px) {
+  .nuestra-iglesia .parallax .video iframe {
+    width: 50%; }
+  .nuestra-iglesia .valores__box {
+    padding: 0 2rem; }
+  .creemos {
+    padding: 0 48px; }
+    .creemos h3 {
+      color: #2c3038;
+      text-align: center;
+      margin-top: 36px; }
+    .creemos .subtitulo {
+      font-size: 16px;
+      color: #2c3038; }
+    .creemos .parrafo {
+      color: #9b9b9b;
+      font-size: 14px; } }
+
+.escuelas_p1 .escuelas-s2 {
+  background: #f2f3f8; }
+
+.escuelas_p1 .nav-horizontal {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .escuelas_p1 .nav-horizontal li {
+    width: 125px; }
+    .escuelas_p1 .nav-horizontal li a {
+      text-align: center; }
+
+.escuelas_p1 li a {
+  padding-left: 12px; }
+
+.escuelas_p1 .nav-link.active, .escuelas_p1 .show > .nav-link {
+  background: #ffce37;
+  border-radius: 4px;
+  padding: 12px 40px; }
+
+.escuelas_p1 .nav-vertical a {
+  border-radius: 4px;
+  padding: 12px 40px; }
+
+.escuelas_p2 {
+  background: #f2f3f8; }
+  .escuelas_p2 .escuelas-s1 h2 {
+    font-size: 22px;
+    color: #2c3038; }
+  .escuelas_p2 .escuelas-s1 h3 {
+    font-size: 18px;
+    color: #2c3038; }
+  .escuelas_p2 .escuelas-s1 h4 {
+    font-size: 15px;
+    color: #9b9b9b; }
+  .escuelas_p2 .escuelas-s1 ul li {
+    color: #2c3038;
+    padding-left: 12px; }
+  .escuelas_p2 .comillas {
+    display: -ms-flexbox;
+    display: flex; }
+    .escuelas_p2 .comillas svg {
+      width: 40px;
+      margin-right: 12px; }
+  .escuelas_p2 .pastor .panel-img {
+    border: 3px solid #9b9b9b;
+    padding: 5px; }
+    .escuelas_p2 .pastor .panel-img img {
+      width: 100%; }
+  .escuelas_p2 .pastor .panel-descripcion {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .escuelas_p2 .pastor .panel-descripcion button {
+      height: 50px;
+      background: #42A5F5;
+      padding: 0 10px;
+      border-radius: 25px;
+      border: none;
+      color: white;
+      margin: 24px 0; }
+    .escuelas_p2 .pastor .panel-descripcion p {
+      margin: 0;
+      text-align: center; }
+  .escuelas_p2 .pastor .redes {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .escuelas_p2 .pastor .redes span {
+      margin: 8px; }
+    .escuelas_p2 .pastor .redes img {
+      width: 30px; }
+  .escuelas_p2 .sermones__box .sermones-border {
+    padding: 12px;
+    width: 100%; }
+  .escuelas_p2 .sermones__box .sermones-item {
+    box-shadow: 0 18px 39px -13px #babbbf;
+    transition: ease-in .5s; }
+    .escuelas_p2 .sermones__box .sermones-item:hover {
+      transition: ease-in .5s; }
+    .escuelas_p2 .sermones__box .sermones-item__img {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .escuelas_p2 .sermones__box .sermones-item__img img {
+        width: auto;
+        height: 300px; }
+    .escuelas_p2 .sermones__box .sermones-item__titulo {
+      font-size: 24px;
+      color: #9b9b9b;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: center;
+      transition: ease-in .5s; }
+    .escuelas_p2 .sermones__box .sermones-item__descripcion {
+      text-align: center;
+      padding-bottom: 12px; }
+    .escuelas_p2 .sermones__box .sermones-item__datos {
+      transition: ease-in .5s;
+      background: #fff;
+      color: #9b9b9b; }
+  .escuelas_p2 .sermones__box .sermones-item:hover .sermones-item__datos {
+    background-color: #42A5F5;
+    color: white;
+    text-align: center;
+    transition: ease-in .5s; }
+  .escuelas_p2 .sermones__box .sermones-item:hover .sermones-item__titulo {
+    color: white;
+    transition: ease-in .5s; }
+
+@media (min-width: 768px) {
+  .escuelas_p2 .sermones__box {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .escuelas_p2 .sermones__box .sermones-border {
+      padding: 12px;
+      width: 50%; } }
+
+@media (min-width: 1200px) {
+  .escuelas_p2 .sermones__box .sermones-border {
+    padding: 12px;
+    width: 33.3%; }
+  .escuelas_p2 .sermones__box .sermones-item__img img {
+    width: 100%;
+    height: auto; } }
+
+.nav-pills .nav-link {
+  border-radius: 0.25rem;
+  border: 1px solid #c4ccd3;
+  margin: 2px; }
+
+.reuniones_p1 .reuniones-s1__item {
+  margin-bottom: 48px; }
+  .reuniones_p1 .reuniones-s1__item img {
+    width: 100%; }
+
+.reuniones_p1 .reuniones-s1 .box-buscar input {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  padding: 13px 19px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #9b9b9b;
+  background-color: #f5f5f5;
+  background-image: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  transition: .3s ease-in-out;
+  border: none; }
+
+.reuniones_p1 .reuniones-s1 .box-galeria {
+  margin-top: 24px; }
+
+.reuniones_p1 .reuniones-s1 .box-archivo {
+  margin-top: 24px; }
+  .reuniones_p1 .reuniones-s1 .box-archivo ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%; }
+  .reuniones_p1 .reuniones-s1 .box-archivo li {
+    display: inline-block;
+    width: 50%; }
+    .reuniones_p1 .reuniones-s1 .box-archivo li i {
+      display: inline-block;
+      padding-right: 8px;
+      color: gray; }
+    .reuniones_p1 .reuniones-s1 .box-archivo li a {
+      color: #ffce37; }
+
+.reuniones_p1 .reuniones-s1 .box-noticias__item h4 {
+  color: #ffce37;
+  font-size: 1.2rem;
+  font-weight: 400; }
+
+.reuniones_p1 .reuniones-s1 .box-noticias__item i {
+  display: inline-block;
+  padding-right: 8px;
+  color: gray; }
+
+.reuniones_p1 .box-descripcion {
+  margin-top: 24px; }
+  .reuniones_p1 .box-descripcion .titulo {
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0;
+    font-size: 24px;
+    color: #2c3038; }
+  .reuniones_p1 .box-descripcion .fecha {
+    font-weight: 400;
+    line-height: 1.71429;
+    letter-spacing: 0.02em;
+    color: #9b9b9b; }
+  .reuniones_p1 .box-descripcion .parrafo {
+    font-weight: 400;
+    line-height: 1.71429;
+    letter-spacing: 0.02em;
+    color: #9b9b9b;
+    font-size: 14px; }
+  .reuniones_p1 .box-descripcion ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 50px; }
+    .reuniones_p1 .box-descripcion ul li a {
+      padding: 4px 16px;
+      border: 1px solid #9b9b9b;
+      margin: 0 12px;
+      border-radius: 8px;
+      color: #9b9b9b;
+      transition: all .5s; }
+      .reuniones_p1 .box-descripcion ul li a:hover {
+        transition: all .5s;
+        background: #ffce37;
+        color: #ffffff;
+        border: 1px solid #ffce37; }
+
+.reuniones_p2 .section-custom:nth-child(odd) {
+  background: #f2f3f8; }
+
+.reuniones_p2 .sedes h3 {
+  color: #2c3038; }
+
+.reuniones_p2 .horario {
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 4px solid #E4E4E4;
+  margin-bottom: 12px;
+  margin-top: 12px; }
+  .reuniones_p2 .horario .dia {
+    display: inline-block;
+    width: 40%; }
+  .reuniones_p2 .horario .hora {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+
+.voluntarios .significado {
+  padding: 48px 0; }
+
+.voluntarios .funciones {
+  padding: 48px 0; }
+  .voluntarios .funciones .detalle {
+    border-top: 2px solid #9b9b9b;
+    padding-top: 24px; }
+  .voluntarios .funciones--item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .voluntarios .funciones--item img {
+      max-width: 100%;
+      height: 44px; }
+  .voluntarios .funciones .header-section {
+    padding-bottom: 24px; }
+
+.voluntarios .informacion--img {
+  height: 300px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 24px; }
+  .voluntarios .informacion--img img {
+    max-width: 100%;
+    height: 100%; }
+
+.voluntarios .informacion--detalle .item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  .voluntarios .informacion--detalle .item .box-img img {
+    width: 50px; }
+
+.voluntarios .informacion--detalle .box-descripcion p:nth-child(1) {
+  color: #ffce37;
+  font-size: 15px; }
+
+.voluntarios_p2 .oportunidades {
+  padding: 48px 0; }
+  .voluntarios_p2 .oportunidades--titulo {
+    font-size: 18px;
+    color: #2c3038;
+    padding: 24px 0 0; }
+  .voluntarios_p2 .oportunidades--item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-bottom: 2px solid #9b9b9b;
+    padding-top: 24px; }
+    .voluntarios_p2 .oportunidades--item .titulo {
+      color: #2c3038;
+      font-size: 22px; }
+    .voluntarios_p2 .oportunidades--item .subtitulo {
+      color: #2c3038;
+      font-size: 16px; }
+    .voluntarios_p2 .oportunidades--item .descripcion {
+      color: #9b9b9b;
+      font-size: 14px;
+      padding-bottom: 24px; }
+
+.voluntarios_p2 .suscripcion {
+  background: #5A748C;
+  padding: 12px; }
+  .voluntarios_p2 .suscripcion--item {
+    display: -ms-flexbox;
+    display: flex;
+    border: 2px dashed #fff;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .voluntarios_p2 .suscripcion img {
+    max-height: 200px;
+    margin: 48px 0; }
+  .voluntarios_p2 .suscripcion .descripcion {
+    padding: 12px;
+    color: white;
+    text-align: center; }
+    .voluntarios_p2 .suscripcion .descripcion p {
+      font-size: 14px; }
+    .voluntarios_p2 .suscripcion .descripcion p:nth-child(1) {
+      font-size: 18px;
+      font-style: italic; }
+
+.voluntarios_p2 .form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  background: #445E72;
+  padding: 12px; }
+  .voluntarios_p2 .form--input {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 12px; }
+  .voluntarios_p2 .form input {
+    width: 70%;
+    display: inline-block;
+    height: 40px;
+    border-radius: 5px;
+    border: none; }
+
+@media (min-width: 1024px) {
+  .voluntarios .funciones .header-section {
+    width: 75%; }
+  .voluntarios .significado .header-section {
+    width: 90%; } }
+
+.post-event {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px; }
+  .post-event a {
+    color: #ffffff; }
+  .post-event__time {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    fill: #efe939;
+    max-height: 100%;
+    min-height: 100%;
+    width: 100px;
+    z-index: 2; }
+    .post-event__time--shape {
+      position: absolute;
+      bottom: 0; }
+    .post-event__time span {
+      position: relative;
+      font-size: 32px; }
+  .post-event__img {
+    position: relative; }
+    .post-event__img:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background: #20202099;
+      transition: .4s all ease; }
+    .post-event__img img {
+      width: 100%; }
+  .post-event__inner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100px; }
+    .post-event__inner .fecha {
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 100px;
+      line-height: 1;
+      color: #b1ac1a; }
+    .post-event__inner:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 100px;
+      max-width: 100%;
+      background: #efe939;
+      transition: .4s all ease;
+      width: 101%; }
+  .post-event__body {
+    z-index: 2; }
+    .post-event__body .list span {
+      font-size: 14px;
+      color: #9b9b9b; }
+  .post-event__title {
+    font-size: 15px;
+    font-weight: 600; }
+
+.conectarse button {
+  width: 300px;
+  margin-top: 24px;
+  min-height: 50px;
+  background: #42A5F5;
+  border: 1.5px solid #42A5F5;
+  border-radius: 40px;
+  color: #ffffff;
+  box-shadow: none;
+  font-size: 20px;
+  margin: auto;
+  transition: all .5s; }
+  .conectarse button:hover {
+    transition: all .5s;
+    box-shadow: -3px 4px 12px -1px #ccc; }
+
+.post-event:hover .post-event__inner:after {
+  width: 101%; }
+
+.post-event:hover .post-event__inner:after {
+  width: 101%; }
+
+.post-event:hover a {
+  color: #2c3038; }
+
+.galeria_1 {
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .galeria_1 li {
+    padding: 16px; }
+    .galeria_1 li img {
+      width: 100%; }
+
+@media (min-width: 1024px) {
+  .post-event {
+    height: 290px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 24px; }
+    .post-event a {
+      color: #ffffff; }
+    .post-event__time {
+      display: block;
+      position: relative;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      fill: #efe939;
+      max-height: 100%;
+      min-height: 100%;
+      width: 85px;
+      z-index: 2; }
+      .post-event__time--shape {
+        position: absolute;
+        bottom: 0; }
+      .post-event__time span {
+        position: relative;
+        font-size: 32px; }
+    .post-event__img {
+      position: relative; }
+      .post-event__img:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background: #20202099;
+        transition: .4s all ease; }
+      .post-event__img img {
+        width: 100%; }
+    .post-event__inner {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      height: 85px; }
+      .post-event__inner .fecha {
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 85px;
+        line-height: 1;
+        color: #b1ac1a; }
+      .post-event__inner:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 85px;
+        max-width: 100%;
+        background: #efe939;
+        transition: .4s all ease;
+        width: 0%; }
+    .post-event__body {
+      z-index: 2; }
+    .post-event__title {
+      font-size: 24px;
+      font-weight: 600; } }
 
 .ofrenda .image {
   display: -ms-flexbox;
@@ -775,33 +1577,3 @@ nav {
     -ms-transform: scale(1);
     transform: scale(1);
     opacity: 1; }
-
-.banner-interno {
-  height: 290px;
-  width: 100%;
-  background-image: url(../img/web/banner-interno.jpg);
-  background-size: cover;
-  width: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: white; }
-
-.nuestra-iglesia .nuestra-historia--descripcion {
-  text-align: justify; }
-
-.nuestra-iglesia .documental p {
-  color: #ffffff; }
-
-.nuestra-iglesia .documental .header-section {
-  position: relative;
-  z-index: 9; }
-
-.nuestra-iglesia .parallax {
-  height: 500px; }
-  .nuestra-iglesia .parallax .video {
-    position: relative;
-    z-index: 9; }

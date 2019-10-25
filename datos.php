@@ -22,9 +22,7 @@
                 'X-Mailer: PHP/' . phpversion();
 
 
-      $msjCorreo='
-
-      <!doctype html>
+      $msjCorreo='<!doctype html>
       <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
       
       <head>
@@ -1009,7 +1007,8 @@
 
       // mail($para, $subject, $msjCorreo, $headers)
     if (mail($para, $subject, $msjCorreo, $headers)) {
-      header("Location: http://dokarim.pe/contactanos.html");
+      header("Location: http://localhost:3000/index.html");
+      
       die();
     } else {
          echo "<script language='javascript'>

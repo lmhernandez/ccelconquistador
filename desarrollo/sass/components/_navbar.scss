@@ -2,11 +2,15 @@
     height: auto;
     display: block !important;
 }
+
 nav{
     position: fixed;
     z-index: 999;
-    width: 100%;
-    background: transparent;
+    width: 100%;    
+    background: white;
+    .container{
+        background: white;
+    }
     top: 0;
     .nav-logo {
         width: auto;
@@ -39,23 +43,9 @@ nav{
             display: flex;
             align-items: center;
             a{
-                color: $white;
+                color: $c_parrafo;
                 font-weight: 400;
                 position: relative;
-                // &:before {
-                //     content: '';
-                //     display: block;
-                //     height: 1px;
-                //     width: 0%;
-                //     position: absolute;
-                //     top: 0;
-                //     left: 0;
-                //     background: $white;
-                //     -webkit-transition: all 0.5s ease-in-out;
-                //     -moz-transition: all 0.5s ease-in-out;
-                //     transition: all 0.5s ease-in-out;
-                //     opacity: 0.8;                    
-                // }
                 &:hover:before{
                     width: 100%;
                 }
@@ -99,7 +89,7 @@ nav{
         }
         .item-links.active{
             a{
-                color: $gray;
+                color: $c_parrafo;
                 
                 &:before{
                     width: 100%;
@@ -161,11 +151,18 @@ nav{
 @media screen and (min-width:992px) {
     .navTrigger {
         display: block;
+        i{
+            background-color: white;
+        }
     }
 
     nav{
         position: fixed;
         width: 100%;
+        background: transparent;
+        .container{
+            background: transparent;
+        }
         .nav-logo {
             width: auto;
             img{
@@ -192,7 +189,6 @@ nav{
                 display: flex;
                 align-items: center;
                 a{
-                    // color: white;
                     color: $white;
                     font-weight: 400;
                     position: relative;
@@ -307,7 +303,7 @@ nav{
 }
 
 .navTrigger i {
-    background-color: white;
+    background-color: #000;
     border-radius: 2px;
     content: '';
     display: block;
@@ -322,7 +318,7 @@ nav{
     position: absolute;
     bottom: -2px;
     right: 0;
-    background: $gray;
+    background: $c_parrafo;
     transition: all 0.5s ease-in-out;
     opacity: 0.8;
 }
@@ -330,7 +326,7 @@ nav{
     color: gray;
 }
 .nav-fix .list-links .item-links:hover a {
-    color: $gray;
+    color: $c_parrafo;
 }
 .navTrigger i:nth-child(1) {
     -webkit-animation: outT 0.8s backwards;
@@ -504,9 +500,10 @@ nav{
 .nav-fix {
     background: #fff;
     height: 70px;
+    box-shadow: 0px 3px 0px 0px rgba(224, 224, 224, 0.6);
     .item-links{
         a{
-            color: $gray;
+            color: $c_parrafo;
         }
     }
 }

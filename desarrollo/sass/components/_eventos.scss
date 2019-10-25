@@ -1,0 +1,216 @@
+.post-event{
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 24px;
+    a{
+        color: $white;
+    }
+    &__time{
+        display: block;
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        fill: #efe939;
+        max-height: 100%;
+        min-height: 100%;
+        width: 100px;
+        z-index: 2;
+        &--shape{
+            position: absolute;
+            bottom: 0;            
+        }
+        span{
+            position: relative;
+            font-size: 32px;
+        }
+    }
+    &__img{
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            background: #20202099;
+            transition: .4s all ease;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__inner{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        height: 100px;
+        .fecha{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            line-height: 1;
+            color: #b1ac1a;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 100px;
+            max-width: 100%;
+            background: #efe939;
+            transition: .4s all ease;
+            width: 101%;
+        }
+    }
+    &__body{
+        z-index: 2;
+        .list{
+            span{
+                font-size: 14px;
+                color: $c_parrafo;
+            }
+        }
+    }
+    &__title{
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+
+.conectarse{
+    button{
+        width: 300px;
+        margin-top: 24px;
+        min-height: 50px;
+        background: $c_resaltante_2;
+        border: 1.5px solid $c_resaltante_2;
+        border-radius: 40px;
+        color: $white;
+        box-shadow: none;
+        font-size: 20px;        
+        margin: auto;
+        transition:  all .5s;
+        &:hover{
+            transition: all .5s;
+            box-shadow: -3px 4px 12px -1px #ccc;
+        }
+    }
+}
+.post-event:hover .post-event__inner:after {
+    width: 101%;
+}
+
+.post-event:hover .post-event__inner:after {
+    width: 101%;
+}
+.post-event:hover a {
+    color: $c_titulo;
+}
+
+.galeria_1{
+    
+    justify-content: center;
+    li{
+        padding: 16px;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .post-event{
+        height: 290px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 24px;
+        a{
+            color: $white;
+        }
+        &__time{
+            display: block;
+            position: relative;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            fill: #efe939;
+            max-height: 100%;
+            min-height: 100%;
+            width: 85px;
+            z-index: 2;
+            &--shape{
+                position: absolute;
+                bottom: 0;            
+            }
+            span{
+                position: relative;
+                font-size: 32px;
+            }
+        }
+        &__img{
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                background: #20202099;
+                transition: .4s all ease;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        &__inner{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            height: 85px;
+            .fecha{
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 85px;
+                line-height: 1;
+                color: #b1ac1a;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 85px;
+                max-width: 100%;
+                background: #efe939;
+                transition: .4s all ease;
+                width: 0%;
+            }
+        }
+        &__body{
+            z-index: 2;
+        }
+        &__title{
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+}

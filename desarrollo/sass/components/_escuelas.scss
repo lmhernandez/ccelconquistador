@@ -1,0 +1,211 @@
+.escuelas_p1{
+    .escuelas-s2{
+        background: $c_fondo_humo;
+    }
+    .nav-horizontal{
+        display: flex;
+        justify-content: center;
+        
+        li{
+            width: 125px;
+            a{
+                text-align: center;
+            }
+        }
+        
+    }
+    li{
+        a{
+            padding-left: 12px;
+        }
+    }
+    .nav-link.active,  .show>.nav-link{
+        background: $c_resaltante_1;
+        border-radius: 4px;
+        padding: 12px 40px;
+    }
+    .nav-vertical{        
+        a{
+            border-radius: 4px;
+            padding: 12px 40px;
+        }
+    
+    }
+}
+.escuelas_p2{
+    background: #f2f3f8;
+    .escuelas-s1{
+        h2{
+            font-size: 22px;
+            color: $c_titulo;
+        }
+        h3{
+            font-size: 18px;
+            color: $c_subtitulo;
+        }
+        h4{
+            font-size: 15px;
+            color: $c_parrafo;
+        }
+        ul{
+            li{
+                color: $c_titulo;
+                padding-left: 12px;
+            }
+        }
+    }
+    .comillas{
+        display: flex;
+        svg{
+            width: 40px;
+            margin-right: 12px;
+        }
+    }
+    .pastor{
+        .panel-img{
+            border: 3px solid $c_parrafo;
+            padding: 5px;
+            img{
+                width: 100%;
+                
+            }
+        }
+        .panel-descripcion{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            button{
+                height: 50px;
+                background: $c_resaltante_2;
+                padding: 0 10px;
+                border-radius: 25px;
+                border: none;
+                color: white;
+                margin: 24px 0;
+            }
+            p{
+                margin: 0;
+                text-align: center;
+            }
+        }
+        .redes{
+            display: flex;
+            justify-content: center;
+            span{
+                margin: 8px;
+            }
+            img{
+                width: 30px;
+            }
+            
+        }
+    }
+    .sermones{
+        &__box{
+            .sermones-border{
+                padding: 12px;
+                width: 100%;
+            }
+            .sermones-item{
+                box-shadow: 0 18px 39px -13px #babbbf;
+                transition: ease-in .5s;            
+                
+                &:hover{
+                    transition: ease-in .5s            
+                }
+                
+                &__img{            
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: auto;
+                        height: 300px;
+                    }
+                }
+                &__titulo{            
+                    font-size: 24px;
+                    color: $c_parrafo;
+                    font-weight: 600;
+                    text-transform: uppercase;       
+                    text-align: center;     
+                    transition: ease-in .5s
+                }
+                &__descripcion{
+                    text-align: center;
+                    padding-bottom: 12px;
+                }
+                &__datos{
+                    transition: ease-in .5s;
+                    background: #fff;
+                    color: $c_parrafo
+                }
+            }
+    
+            .sermones-item:hover .sermones-item__datos{                
+                background-color: $c_resaltante_2;
+                color: white;          
+                text-align: center;  
+                transition: ease-in .5s
+            }
+            .sermones-item:hover .sermones-item__titulo{                
+                color: white;     
+                transition: ease-in .5s       
+            }
+        }
+    }
+    
+
+}
+
+@media (min-width: 768px) { 
+    .escuelas_p2{
+        .sermones{
+            &__box{
+                display: flex;
+                flex-wrap: wrap;
+                .sermones-border{
+                    padding: 12px;
+                    width: 50%;
+                }
+                .sermones-item{               
+                    
+                    &__img{
+                        img{
+                        }
+                    }
+                    &__titulo{                
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) { 
+    .escuelas_p2{
+        .sermones{
+            &__box{
+                .sermones-border{
+                    padding: 12px;
+                    width: 33.3%;
+                }
+                .sermones-item{
+                    &__img{
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    &__titulo{                
+                    }
+                }
+            }
+        }
+    }
+}
+.nav-pills .nav-link {
+    border-radius: 0.25rem;
+    border: 1px solid #c4ccd3;
+    margin: 2px;
+}

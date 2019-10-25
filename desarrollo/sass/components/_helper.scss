@@ -12,7 +12,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
-    color: #666;
+    color: $c_parrafo;
     box-sizing: border-box;
     position: relative;
     font-family: 'Kanit', sans-serif;
@@ -44,13 +44,13 @@ a:hover{
   display: flex;
 }
 .main-web{
-  margin-top: 70px;
+  
 }
 .header-section{
   &__titulo{
     padding-bottom: 16px;
       p{
-          color: $color_titulo;
+          color: $c_titulo;
           font-weight: 600;
           text-align: center;
           font-size: 28px;
@@ -60,7 +60,7 @@ a:hover{
   }
   &__subtitulo{
       p{
-          color: $color_subtitulo;
+          color: $c_subtitulo;
           font-size: 16px;
           margin: auto;
           text-align: justify;
@@ -74,10 +74,32 @@ a:hover{
   padding-top: 32px;
   padding-bottom: 22px;
 }
-
+.btn-personalizado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  button{
+    width: 300px;
+    margin-top: 24px;
+    min-height: 50px;
+    background: $c_resaltante_2;
+    border: 1.5px solid $c_resaltante_2;
+    border-radius: 40px;
+    color: $white;
+    box-shadow: none;
+    font-size: 20px;        
+    margin: auto;
+    transition:  all .5s;
+    &:hover{
+        transition: all .5s;
+        box-shadow: -3px 4px 12px -1px #ccc;
+    }
+  }
+}
 .parallax{
   width: 100%;
-  height: 400px;
+  height: 800px;
   flex: 1;
   display: flex;
   text-align: center;
@@ -85,6 +107,21 @@ a:hover{
   overflow: hidden;
   background-color: #000;
   padding: 0 !important;
+  .header-section{
+    position: relative;
+    z-index: 9;
+    &__titulo{
+        p{
+            color: $white;
+        }
+    }
+    &__subtitulo{
+        p{
+            z-index: 9;
+            color: $white;
+        }
+    }
+  }
   .image {
     background-attachment: fixed; 
     background-size: cover;
@@ -106,13 +143,23 @@ a:hover{
       position: absolute;
     }
   }
+  &__box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 9;
+    .parallax-item{
+        height: 150px;
+    }
+  }
 }
 
 @media (min-width: 768px) {
   .header-section{
     &__titulo{
         p{
-          width: 50%;
+          width: 80%;
           margin: auto;
           
         }
@@ -121,14 +168,26 @@ a:hover{
   
   .section-custom{
   }
+
+  .parallax{
+    height: 400px;
+    &__box{
+        padding-top: 24px;
+        flex-direction: row;
+        .parallax-item{
+            width: 25%;
+        }
+    }
+  }
 }
 
 @media (min-width: 1200px) {
   .header-section{
-    width: 50%;
+    width: 75%;
     margin: auto;
     &__titulo{
         p{
+          width: 100%;;
           font-size: 32px;
         }
     }
@@ -142,6 +201,61 @@ a:hover{
   .section-custom{
     padding: 0 10%;
     padding-top: 52px;
-    padding-bottom: 22px;
+    padding-bottom: 52px;
+  }
+}
+
+.owl-nav{
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  button{
+    &:hover{
+      background: transparent !important;
+    }
+    &:focus{
+      background: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+  span{
+    color: white;
+    font-size: 36px;
+    padding: 24px;
+    &:focus{
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.owl-dots{
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 24px;
+  button{
+    border: none;
+    outline: none;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: white !important;
+    border-radius: 50%;
+    margin: 4px !important;
+    span{
+      background: transparent !important;
+    }
+  }
+  button.active{
+    background: $c_resaltante_2 !important;
   }
 }

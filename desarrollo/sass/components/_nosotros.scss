@@ -1,70 +1,4 @@
-.ofrenda{
-    .image{
-        display: flex;
-        align-items: center;
-    }
-}
-.formas{
-    padding: 24px 0;
-    button{
-        width: 100%;
-        margin-top: 24px;
-        height: 50px;
-        background: white;
-        border: 1.5px solid #42A5F5;
-        border-radius: 40px;
-        color: #42A5F5;
-        box-shadow: -3px 4px 12px -1px #ccc;
-        font-size: 20px;        
-        transition:  all .5s;
-        &:hover{
-            transition: all .5s;
-            background: #42A5F5;
-            border: none;
-            border-radius: 40px;
-            color: white;
-        }
-    }
-}
-.formas-item{
-    display: flex;
-    align-items: center;
-    &__descripcion{
-        padding-left: 14px;
-        .titulo{
-            color: #000;
-            font-size: 24px;
 
-        }
-    }
-    &__icono{
-        background: #42A5F5;
-        padding: 14px;
-        border-radius: 50%;
-        position: relative;
-        &:after{
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            padding: 5px;
-            pointer-events: none;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            box-sizing: content-box;
-            box-shadow: 0 0 0 3px #42A5F5;
-            transition: transform .3s,opacity .3s;
-            transform: scale(.8);
-            opacity: 0;
-        }
-        
-    }
-    &:hover .formas-item__icono:after{
-        transform: scale(1);
-        opacity: 1;
-    }
-}
 
 .banner-interno{
     height: 290px;
@@ -93,11 +27,136 @@
         }
         
     }
-    .parallax{
+    .parallax.documental{
         height: 500px;
         .video{
             position: relative;
             z-index: 9;
+            iframe{
+
+            }
         }
     }
+    .valores{
+        background: $c_fondo_humo;
+        &__box{
+            padding: 0;
+        }
+        &--item{
+            display: flex;
+            margin-top: 24px;
+            box-shadow: 6px 6px 20px rgba(0,0,0,0.2);
+            border-radius: 20px;
+            border-radius: 9px;
+            height: 100px;
+            align-items: center;
+            p{
+                width: 50%;
+                display: inline-block;
+                &:nth-child(1){
+                    color: #777777;
+                    padding-left: 2rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .vision{
+        margin-bottom: 48px;
+        .panel{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .panel-img{
+            height: 350px;
+            background: url(./../../../produccion/img/nuestraIglesia/vision.jpg);
+            background-position: center;
+        }
+        h3{
+            text-align: center;
+            color: $c_titulo;
+        }
+        button{
+            width: 70%;
+            margin-top: 24px;
+            min-height: 50px;
+            background: white;
+            border: 1.5px solid $c_resaltante_2;
+            border-radius: 40px;
+            color: $c_resaltante_2;
+            box-shadow: -3px 4px 12px -1px #ccc;
+            font-size: 20px;        
+            transition:  all .5s;
+            &:hover{
+                transition: all .5s;
+                background: $c_resaltante_2;
+                border: none;
+                border-radius: 40px;
+                color: white;
+            }
+        }
+    }
+    .siguenosRedes{
+
+    }
+}
+
+.creemos{
+    h3{
+        color: $c_titulo;
+        text-align: center;
+        margin-top: 36px;
+    }
+    .subtitulo{
+        font-size: 16px;
+        color: $c_subtitulo
+    }
+    .parrafo{
+        color: $c_parrafo;
+        font-size: 14px;
+
+    }
+}
+
+@media (min-width: 768px) { 
+
+}
+
+
+@media (min-width: 1024px) { 
+    .nuestra-iglesia{
+        .parallax{
+            .video{
+                iframe{
+                    width: 50%;
+                }
+            }
+        }
+        .valores{
+            &__box{
+                padding: 0 2rem;
+            }
+        }
+    }
+    .creemos{
+        padding: 0 48px;
+        h3{
+            color: $c_titulo;
+            text-align: center;
+            margin-top: 36px;
+        }
+        .subtitulo{
+            font-size: 16px;
+            color: $c_subtitulo
+        }
+        .parrafo{
+            color: $c_parrafo;
+            font-size: 14px;
+    
+        }
+    }
+    
 }
